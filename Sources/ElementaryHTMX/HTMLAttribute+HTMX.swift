@@ -132,4 +132,8 @@ public extension HTMLAttribute.hx {
     static func validate(_ value: Bool) -> HTMLAttribute {
         .init(name: "hx-validate", value: value.stringValue)
     }
+    
+    static func encoding(_ value: HTMLAttributeValue.HTMX.Encoding) -> HTMLAttribute {
+        .init(name: "hx-encoding", value: value.rawValue)
+    }
 }

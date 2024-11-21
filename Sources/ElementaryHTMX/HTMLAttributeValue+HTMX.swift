@@ -189,6 +189,16 @@ public extension HTMLAttributeValue.HTMX.EventTrigger {
     }
 }
 
+public extension HTMLAttributeValue.HTMX.Encoding {
+    public var rawValue: String
+    public init(rawValue: String) {
+        self.rawValue = rawValue
+    }
+
+    public static var application_xWWWFormUrlencoded: Self { .init(rawValue: "application/x-www-form-urlencoded") }
+    public static var multipart_formData: Self { .init(rawValue: "multipart/form-data") }
+}
+
 public extension HTMLAttributeValue.HTMX {
     struct Extension: RawRepresentable, ExpressibleByStringLiteral {
         public var rawValue: String
